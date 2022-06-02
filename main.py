@@ -13,7 +13,7 @@ class Verifinder:
         self.hits = 0
         self.rates = 0
 
-        self.sessid = "73f79bb06be8500e726f522776cedd14" #SESSION ID HERE
+        self.sessid = "" #SESSION ID HERE
 
         self.threads = 3
         self.rate_time = 30
