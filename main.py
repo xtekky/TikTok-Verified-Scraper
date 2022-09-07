@@ -51,7 +51,7 @@ class Verifinder:
     
     def __scrape_veris(self, keyword: str, cursor: int = 0) -> requests.Response:
         __base_params = self.__base_params(keyword, cursor)
-
+ 
         return requests.get(
             url = (
                 "https://api16-normal-c-useast1a.tiktokv.com"

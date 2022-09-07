@@ -138,7 +138,7 @@ def iter_all_strings():
     for size in itertools.count(1):
         for s in itertools.product(string.ascii_lowercase, repeat=size):
             yield "".join(s)
-
+ 
 def get_keywords(count: int):
     letter_list = []
     for s in iter_all_strings():
