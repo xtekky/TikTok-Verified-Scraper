@@ -70,8 +70,14 @@ class Verifinder:
                     # print(__scrape_req.text)
                     for _ in __scrape_req.json()["user_list"]:
                         if _["user_info"]["unique_id"] not in self.accounts:
+                            
                             self.accounts.append(_["user_info"]["unique_id"])
-                            print(f'{_["user_info"]["unique_id"]}:{_["user_info"]["follower_count"]}:{_["user_info"]["uid"]}:{_["user_info"]["sec_uid"]}:{_["user_info"]["region"]}')
+                            info_string = f'{_["user_info"]["unique_id"]}:{_["user_info"]["follower_count"]}:{_["user_info"]["uid"]}:{_["user_info"]["sec_uid"]}:{_["user_info"]["region"]}'
+                            
+                            print(info_string)
+                            
+                            with open("utils/veris.txt") as file:
+                                file.write(info_string + "\n")
                     
                     if len(__scrape_req.json()["user_list"]) == 0:
                         cursor = 0
